@@ -1,0 +1,28 @@
+﻿body {
+}
+
+#LogInBody {
+	width: 230px;
+	margin: 150px auto;
+	text-align: center;
+}
+
+input.Textboxes {
+	display: block;
+	border: 0;
+	border-bottom: solid 1px #808080;
+	outline: none;
+	width: 250px;
+	height: 40px;
+	font-size: 15px;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: 100;
+	border: 1px solid #fff;
+	box-shadow: 2px 2px 5px #AFE9FF;
+}

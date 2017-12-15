@@ -1,0 +1,18 @@
+﻿
+header, footer,
+header a, footer a {
+	background-color: #222;
+	color: #aaa;
+}
+
+form {
+	/*	background-color: #E1F0C4;*/
+}
+
+	form .section {
+
+	}
+
+		form .section a {
+			color: black;
+		}
