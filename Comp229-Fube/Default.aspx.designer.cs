@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Comp229_Fube
+namespace Fube
 {
 
 
-    public partial class _Default
+    public partial class Default
     {
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Fube
 {
-	public partial class About : System.Web.UI.Page
+	public partial class Shop : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

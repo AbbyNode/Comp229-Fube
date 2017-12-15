@@ -1,0 +1,52 @@
+﻿body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0px;
+}
+
+header #Logo {
+	height: 40px;
+	position: absolute;
+	border: 1px solid black;
+	margin-left: 20px;
+}
+
+header nav {
+	text-align: right;
+}
+
+	header nav ul {
+		margin: 0px;
+	}
+
+		header nav ul li {
+			display: inline-block;
+			text-decoration: none;
+		}
+
+			header nav ul li a {
+				display: block;
+				padding: 10px;
+				border-left: 1px solid lightgray;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+form {
+	padding: 20px;
+}
+
+#FooterBoxes {
+	text-align: center;
+}
+
+	#FooterBoxes div {
+		display: inline-block;
+		margin: 0 50px;
+		vertical-align: top;
+		text-align: left;
+	}
+
+#Copyright {
+	text-align: center;
+	padding: 10px;
+}
