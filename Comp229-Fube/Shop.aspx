@@ -9,31 +9,31 @@
 	<div id="ShopContainer">
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="ShopItemImg" src="res/Tubes/lasagnatube.jpg" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="ShopItemImg" src="res/Tubes/cerealtube.jpg" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="ShopItemImg" src="res/Tubes/fruittube_edit.jpg" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="ShopItemImg" src="res/Tubes/" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="ShopItemImg" src="res/Tubes/" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="ShopItemImg" src="res/Tubes/" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="ShopItemImg" src="res/Tubes/" />
 		</a>
 	</div>
 
