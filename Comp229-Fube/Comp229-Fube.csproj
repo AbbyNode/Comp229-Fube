@@ -135,6 +135,7 @@
     <Content Include="css\Color1.css" />
     <Content Include="css\CustomTube.css" />
     <Content Include="css\Global.css" />
+    <Content Include="css\Shop.css" />
     <Content Include="css\Home.css" />
     <Content Include="css\LogIn.css" />
     <Content Include="CustomTube.aspx" />

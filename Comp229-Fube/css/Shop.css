@@ -1,0 +1,22 @@
+﻿body {
+}
+
+#ShopContainer {
+	padding: 20px;
+}
+
+	#ShopContainer .ShopItem {
+		display: inline-block;
+		margin: 40px;
+		text-decoration: none;
+	}
+
+		#ShopContainer .ShopItem .ShopItemTitle {
+			margin: 0px;
+			margin-bottom: 10px;
+		}
+
+		#ShopContainer .ShopItem .ShopItemImg {
+			width: 256px;
+			height: 256px;
+		}

@@ -35,6 +35,15 @@ form {
 	padding: 20px;
 }
 
+.linkAsButton {
+	display: block;
+	padding: 5px;
+	border: 1px solid gray;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+}
+
 #FooterBoxes {
 	text-align: center;
 }
