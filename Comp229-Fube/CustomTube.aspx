@@ -8,7 +8,7 @@
 		<h3>Add Ingredient:</h3>
 		<asp:DropDownList ID="IngredientsDropDown" runat="server" DataSourceID="IngredientsData" DataTextField="Name" DataValueField="Name">
 		</asp:DropDownList>
-		<asp:SqlDataSource ID="IngredientsData" runat="server" ConnectionString="<%$ ConnectionStrings:FUBEConnectionString %>" SelectCommand="SELECT [Name] FROM [Ingredients]"></asp:SqlDataSource>
+		<asp:SqlDataSource ID="IngredientsData" runat="server" ConnectionString="<%$ ConnectionStrings:FUBEConnectionString2 %>" SelectCommand="SELECT [Name] FROM [Ingredients]"></asp:SqlDataSource>
 		<asp:Button ID="AddIngredientButton" runat="server" Text="Add" OnClick="AddIngredientButton_Click" />
 	</div>
 	<div id="TubeContainer">
