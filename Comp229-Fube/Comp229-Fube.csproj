@@ -151,7 +151,11 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="LogIn.aspx" />
     <Content Include="res\BannerImgPlaceholder.png" />
+    <Content Include="res\BlankTube.jpg" />
     <Content Include="res\Fube.png" />
+    <Content Include="res\Ingredients\Apple.png" />
+    <Content Include="res\Ingredients\Banana.png" />
+    <Content Include="res\Ingredients\Watermelon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

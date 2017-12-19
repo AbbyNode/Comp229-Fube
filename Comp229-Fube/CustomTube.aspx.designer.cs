@@ -22,6 +22,15 @@ namespace Comp229_Fube {
         protected global::System.Web.UI.WebControls.DropDownList IngredientsDropDown;
         
         /// <summary>
+        /// IngredientsData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource IngredientsData;
+        
+        /// <summary>
         /// AddIngredientButton control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,14 @@ namespace Comp229_Fube {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button AddIngredientButton;
+        
+        /// <summary>
+        /// IngredientsPlaceholder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder IngredientsPlaceholder;
     }
 }

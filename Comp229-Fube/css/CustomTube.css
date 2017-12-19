@@ -1,4 +1,24 @@
 ﻿body {
 }
 
+#TubeContainer {
+	position: relative;
+}
 
+#BlankTube {
+	height: 300px;
+}
+
+#TubeIngredients {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 20px;
+	padding-left: 40px;
+}
+
+	#TubeIngredients img {
+		width: 150px;
+		max-height: 150px;
+		margin: 10px;
+	}
