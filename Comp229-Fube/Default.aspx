@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 	<div id="Banner" class="section">
 		<div class="BannerItem">
-			<img class="BannerImg" src="res/BannerImgPlaceholder.png" />
+			<img class="BannerImg" src="res/Tubes/tube-food-4.jpg" />
 			<div class="BannerText">
 				<h1>Title Here</h1>
 				<p>Info here.</p>
@@ -16,35 +16,19 @@
 	<div id="BestSellers" class="section">
 		<a class="BestSellersItem" href="#">
 			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="BestSellersItemImg" src="res/Tubes/lasagnatube.jpg" />
 		</a>
 		<a class="BestSellersItem" href="#">
 			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="BestSellersItemImg" src="res/Tubes/cerealtube.jpg" />
 		</a>
 		<a class="BestSellersItem" href="#">
 			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="BestSellersItemImg" src="res/res/Tubes/fruittube_edit.jpg" />
 		</a>
 		<a class="BestSellersItem" href="#">
 			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
-		</a>
-		<a class="BestSellersItem" href="#">
-			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
-		</a>
-		<a class="BestSellersItem" href="#">
-			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
-		</a>
-		<a class="BestSellersItem" href="#">
-			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
-		</a>
-		<a class="BestSellersItem" href="#">
-			<h2 class="BestSellersItemTitle">Item Title</h2>
-			<img class="BestSellersItemImg" src="res/BannerImgPlaceholder.png" />
+			<img class="BestSellersItemImg" src="res/res/Tubes/pizzburgertube.jpg" />
 		</a>
 	</div>
 </asp:Content>

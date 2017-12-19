@@ -21,19 +21,19 @@
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/" />
+			<img class="ShopItemImg" src="res/Tubes/pizzburgertube.jpg" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/" />
+			<img class="ShopItemImg" src="res/Tubes/seafoodtube.jpg" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/" />
+			<img class="ShopItemImg" src="res/Tubes/steaktube.jpg" />
 		</a>
 		<a class="ShopItem" href="#">
 			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/" />
+			<img class="ShopItemImg" src="res/Tubes/sushitube.jpg" />
 		</a>
 	</div>
 
