@@ -12,8 +12,8 @@ CREATE DATABASE [FUBE]
 */
 GO
 
+
 ALTER DATABASE [FUBE] SET COMPATIBILITY_LEVEL = 120
-GO
 
 /*
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
@@ -127,7 +127,7 @@ SET ANSI_PADDING ON
 GO
 
 CREATE TABLE [dbo].[Users](
-	[UserID] [numeric](8, 0) NOT NULL,
+	[UserID] [int] IDENTITY(1,1) NOT NULL,
 	[Email] [varchar](50) NULL,
 	[Password] [varchar](50) NULL,
 	[FirstName] [varchar](50) NULL,
@@ -158,7 +158,7 @@ SET ANSI_PADDING ON
 GO
 
 CREATE TABLE [dbo].[Tubes](
-	[TubeID] [numeric](8, 0) NOT NULL,
+	[TubeID] [int] NOT NULL,
 	[Name] [varchar](50) NULL,
 	[Image] [image] NULL,
 	[Description] [varchar](100) NULL,
@@ -184,8 +184,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Orders](
-	[OrderID] [numeric](8, 0) NOT NULL,
-	[UserID] [numeric](8, 0) NULL,
+	[OrderID] [int] NOT NULL,
+	[UserID] [int] NULL,
 	[ShipDate] [date] NULL,
 	[OrderDate] [date] NULL,
  CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED 
@@ -207,8 +207,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[OrderItems](
-	[OrderID] [numeric](8, 0) NULL,
-	[TubeID] [numeric](8, 0) NULL,
+	[OrderID] [int] NULL,
+	[TubeID] [int] NULL,
 	[Quantity] [numeric](3, 0) NULL,
 	[SizeMultiplier] [numeric](3, 2) NULL
 ) ON [PRIMARY]
@@ -236,7 +236,7 @@ SET ANSI_PADDING ON
 GO
 
 CREATE TABLE [dbo].[Ingredients](
-	[IngredientID] [numeric](8, 0) NOT NULL,
+	[IngredientID] [int] NOT NULL,
 	[Name] [varchar](50) NULL,
 	[Price] [float] NULL,
 	[Description] [varchar](100) NULL,
@@ -265,7 +265,7 @@ SET ANSI_PADDING ON
 GO
 
 CREATE TABLE [dbo].[Admin](
-	[AdminID] [numeric](8, 0) NOT NULL,
+	[AdminID] [int] NOT NULL,
 	[Email] [varchar](50) NULL,
 	[Password] [varchar](50) NULL,
  CONSTRAINT [PK_Admin] PRIMARY KEY CLUSTERED 
