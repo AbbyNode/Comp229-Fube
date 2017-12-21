@@ -132,7 +132,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\About.css" />
     <Content Include="css\Color1.css" />
+    <Content Include="css\Contact.css" />
     <Content Include="css\CustomTube.css" />
     <Content Include="css\Global.css" />
     <Content Include="css\Shop.css" />

@@ -1,0 +1,16 @@
+﻿body {
+}
+
+#ContactInfo {
+	display: inline-block;
+}
+
+#SideImages {
+	float: right;
+	margin-top: 50px;
+}
+
+#SideImages img {
+	height: 300px;
+	float: left;
+}
