@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CustomTube.aspx.cs" Inherits="Comp229_Fube.CustomTube" %>
+﻿<%@ Page Title="Custom Tube" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CustomTube.aspx.cs" Inherits="Comp229_Fube.CustomTube" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
 	<link href="css/CustomTube.css" rel="stylesheet" />

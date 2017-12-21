@@ -11,14 +11,13 @@
 
 #TubeIngredients {
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	padding: 20px;
-	padding-left: 40px;
+	width: 850px;
+	top: 50px;
+	left: 50px;
 }
 
 	#TubeIngredients img {
-		width: 150px;
-		max-height: 150px;
-		margin: 10px;
+		max-width: 150px;
+		max-height: 180px;
+		margin-left: 50px;
 	}

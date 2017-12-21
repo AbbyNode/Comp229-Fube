@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="Fube.LogIn" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="Fube.LogIn" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
 	<link href="css/LogIn.css" rel="stylesheet" />
