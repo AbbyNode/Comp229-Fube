@@ -128,8 +128,9 @@ GO
 
 CREATE TABLE [dbo].[Users](
 	[UserID] [int] IDENTITY(1,1) NOT NULL,
-	[Email] [varchar](50) NULL,
-	[Password] [varchar](50) NULL,
+	[Email] [varchar](50) NOT NULL,
+	[Password] [varchar](50) NOT NULL,
+	[IsAdmin] [bit] NOT NULL,
 	[FirstName] [varchar](50) NULL,
 	[LastName] [varchar](50) NULL,
 	[Address] [varchar](50) NULL,
@@ -252,28 +253,6 @@ SET ANSI_PADDING OFF
 GO
 
 USE [FUBE]
-GO
-
-/****** Object:  Table [dbo].[Admin]    Script Date: 12/15/2017 10:34:37 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-SET ANSI_PADDING ON
-GO
-
-CREATE TABLE [dbo].[Admin](
-	[AdminID] [int] NOT NULL,
-	[Email] [varchar](50) NULL,
-	[Password] [varchar](50) NULL,
- CONSTRAINT [PK_Admin] PRIMARY KEY CLUSTERED 
-(
-	[AdminID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-
 GO
 
 SET ANSI_PADDING OFF
