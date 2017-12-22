@@ -82,7 +82,7 @@ namespace Fube {
 
 			try {
 				if (sdr_CurrentUser.Read()) {
-					Session[Session_CurrentUser] = sdr_CurrentUser.GetInt32(0);
+					Session[Session_CurrentUser] = Convert.ToInt32(sdr_CurrentUser.GetValue(0));
 
 					if (sdr_CurrentUser.GetBoolean(3)) {
 						result = "admin";

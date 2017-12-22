@@ -58,7 +58,7 @@ namespace Fube {
 			link.Click += (object sender, EventArgs e) => { SelectTube(id, name, price); };
 
 			HtmlGenericControl h = new HtmlGenericControl("h1");
-			h.InnerText = name;
+			h.InnerText = name + " $" + price;
 			h.Attributes.Add("class", "ShopItemTitle");
 			link.Controls.Add(h);
 
