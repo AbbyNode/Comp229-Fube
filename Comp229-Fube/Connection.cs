@@ -5,73 +5,55 @@ using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace Fube
-{
-    public class Connection
-    {
-        private static SqlConnection con;
-        private static SqlCommand command;
-        private static SqlDataReader sdr;
-        static Connection()
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["connect"].ToString();
-            con = new SqlConnection(connectionString);
-            command = new SqlCommand("", con);
-            sdr = command.ExecuteReader(); // What's role?
-        }
+namespace Fube {
+	public class Connection {
+		private static SqlConnection con;
 
-        public static string loginAccount(string id, string password)
-        {
-            string result;
-            string query = "SELECT * FROM Users WHERE username = '" + id + "' and password='" + password + "'";
-            command.CommandText = query;
-            con.Open();
-            bool IsAdmin = sdr.GetBoolean(0);
+		static Connection() {
+			string connectionString = ConfigurationManager.ConnectionStrings["FUBE"].ToString();
+			con = new SqlConnection(connectionString);
+		}
 
-            try
-            {
-                if (sdr.Read() && !IsAdmin)
-                {
-                    result = "user";
-                    return result;
-                }
-                else
-                {
-                    if (sdr.Read() && IsAdmin)
-                    {
-                        result = "admin";
-                        return result;
-                    }
-                    else
-                    {
-                        result = string.Empty;
-                        return result;
-                    }
-                }
-            }
-            finally
-            {
-                con.Close();
-            }
-            
-        }
+		public static string loginAccount(string id, string password) {
+			string result;
 
-        public static void createAccount(Account account)
-        {
-            string query = string.Format(@"INSERT INTO Users VALUES('{0}', '{1}', '{2}', '{3}', '{4}')",
-                account.Username, account.Password, account.Firstname, account.Lastname, account.Address);
-            command.CommandText = query;
+			string query_CurrentUser = "SELECT * FROM Users WHERE username = '" + id + "' and password='" + password + "'";
+			SqlCommand cmd_CurrentUser = new SqlCommand(query_CurrentUser, con);
 
-            try
-            {
-                con.Open();
-                command.ExecuteNonQuery();
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
+			con.Open();
+			SqlDataReader sdr_CurrentUser = cmd_CurrentUser.ExecuteReader();
 
-    }
+			try {
+				if (sdr_CurrentUser.Read()) {
+					if (sdr_CurrentUser.GetBoolean(3)) {
+						result = "admin";
+					} else {
+						result = "user";
+					}
+				} else {
+					result = string.Empty;
+				}
+			} finally {
+				sdr_CurrentUser.Close();
+				con.Close();
+			}
+
+			return result;
+		}
+
+		public static void createAccount(Account account) {
+			string query = string.Format(@"INSERT INTO Users VALUES('{0}', '{1}', '{2}', '{3}', '{4}')",
+				account.Username, account.Password, account.Firstname, account.Lastname, account.Address);
+
+			SqlCommand cmd_Insert = new SqlCommand(query);
+
+			try {
+				con.Open();
+				cmd_Insert.ExecuteNonQuery();
+			} finally {
+				con.Close();
+			}
+		}
+
+	}
 }
