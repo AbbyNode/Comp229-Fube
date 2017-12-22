@@ -151,7 +151,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Tubes](
-	[TubeID] [int] NOT NULL,
+	[TubeID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](50) NOT NULL,
 	[Price] [numeric](8, 2) NOT NULL,
 	[Image] [varchar](50) NULL,
@@ -175,7 +175,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Orders](
-	[OrderID] [int] NOT NULL,
+	[OrderID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NOT NULL,
 	[OrderDate] [date] NOT NULL,
 	[ShipDate] [date] NULL,
@@ -198,7 +198,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[OrderItems](
-	[OrderID] [int] NOT NULL,
+	[OrderID] [int] IDENTITY(1,1) NOT NULL,
 	[TubeID] [int] NOT NULL,
 	[Quantity] [numeric](3, 0) NOT NULL,
 	[SizeMultiplier] [numeric](3, 2) NOT NULL
@@ -224,7 +224,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Ingredients](
-	[IngredientID] [int] NOT NULL,
+	[IngredientID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](50) NOT NULL,
 	[Price] [numeric](8, 2) NOT NULL,
  CONSTRAINT [PK_Ingredients] PRIMARY KEY CLUSTERED 
