@@ -7,29 +7,31 @@ namespace Fube
 {
     public class Account
     {
-        public int Id { get; set; }
-        public string Email { get; set; }
+        public int UserID { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public bool IsAdmin { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
         public string Address { get; set; }
 
-        public Account(int id, string email, string password, string firstName, string lastName, string address)
+
+        public Account(int userID, string username, string password, bool isAdmin, string firstname, string lastname, string address)
         {
-            Id = id;
-            Email = email;
+            UserID = userID;
+            Username = username;
             Password = password;
-            FirstName = firstName;
-            LastName = lastName;
+            Firstname = firstname;
+            Lastname = lastname;
             Address = address;
         }
 
-        public Account(string email, string password, string firstName, string lastName, string address)
+        public Account(string username, string password, string firstname, string lastname, string address)
         {
-            Email = email;
+            Username = username;
             Password = password;
-            FirstName = firstName;
-            LastName = lastName;
+            Firstname = firstname;
+            Lastname = lastname;
             Address = address;
         }
 
