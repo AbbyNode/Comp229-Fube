@@ -40,6 +40,15 @@ namespace Comp229_Fube {
         protected global::System.Web.UI.WebControls.Button AddIngredientButton;
         
         /// <summary>
+        /// ResetButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ResetButton;
+        
+        /// <summary>
         /// IngredientsPlaceholder control.
         /// </summary>
         /// <remarks>

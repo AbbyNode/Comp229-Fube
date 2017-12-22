@@ -43,5 +43,11 @@ namespace Comp229_Fube {
 				IngredientsPlaceholder.Controls.Add(img);
 			}
 		}
-	}
+
+        protected void ResetButton_Click(object sender, EventArgs e)
+        {
+            IngredientsPlaceholder.Controls.Clear();
+            Session[SESSION_VAR] = null;
+        }
+    }
 }
