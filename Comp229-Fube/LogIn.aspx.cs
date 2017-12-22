@@ -27,11 +27,6 @@ namespace Fube
 
         public void LoginClick(object sender, EventArgs e)
         {
-			Session[SiteMaster.Session_CurrentUser] = "hi";
-			return;
-
-
-
             string id = idTxtBox.Text;
             string pwd = pwTxtBox.Text;
 
