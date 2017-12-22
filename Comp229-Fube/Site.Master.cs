@@ -18,14 +18,15 @@ namespace Comp229_Fube {
 				LogInPlaceHolder.Controls.Add(logIn);
 			} else {
 				LinkButton logOut = new LinkButton();
-				logOut.OnClientClick = "LogOut";
+				logOut.Click += LogOut;
 				logOut.Text = "Log Out";
 				LogInPlaceHolder.Controls.Add(logOut);
 			}
 		}
 
-		private void LogOut() {
+		private void LogOut(object sender, EventArgs e) {
 			Session[Session_CurrentUser] = null;
+			Response.Redirect("Default.aspx");
 		}
 	}
 }
