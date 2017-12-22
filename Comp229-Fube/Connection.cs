@@ -7,13 +7,16 @@ using System.Data.SqlClient;
 
 namespace Fube {
 	public class Connection {
+		/*
 		private static SqlConnection con;
 
 		static Connection() {
 			string connectionString = ConfigurationManager.ConnectionStrings["FUBE"].ToString();
 			con = new SqlConnection(connectionString);
 		}
+		*/
 
+		/*
 		public static string loginAccount(string id, string password) {
 			string result;
 
@@ -40,7 +43,9 @@ namespace Fube {
 
 			return result;
 		}
+		*/
 
+		/*
 		public static void createAccount(Account account) {
 			string query = string.Format(@"INSERT INTO Users VALUES('{0}', '{1}', '{2}', '{3}', '{4}')",
 				account.Username, account.Password, account.Firstname, account.Lastname, account.Address);
@@ -54,6 +59,7 @@ namespace Fube {
 				con.Close();
 			}
 		}
+		*/
 
 	}
 }

@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fube {
+namespace Comp229_Fube {
     
     
-    public partial class Shop {
+    public partial class SubmitOrder {
         
         /// <summary>
-        /// CartGridView control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView CartGridView;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
         /// Fube_OrderItems control.
@@ -29,23 +29,5 @@ namespace Fube {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource Fube_OrderItems;
-        
-        /// <summary>
-        /// SubmitOrderButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SubmitOrderButton;
-        
-        /// <summary>
-        /// ShopItemsPlaceHolder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ShopItemsPlaceHolder;
     }
 }
