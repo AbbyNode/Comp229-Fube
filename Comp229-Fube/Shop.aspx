@@ -4,7 +4,7 @@
 	<link href="css/Shop.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-	<h1>Cart</Cart</h1>
+	<h1>Cart</h1>
 	<asp:GridView ID="CartGridView" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="OrderID,TubeID" DataSourceID="Fube_OrderItems" ForeColor="Black" GridLines="Horizontal">
 		<Columns>
 			<asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
