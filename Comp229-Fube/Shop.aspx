@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 	<h1>Cart</h1>
-	<asp:GridView ID="CartGridView" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="OrderID,TubeID" DataSourceID="Fube_OrderItems" ForeColor="Black" GridLines="Horizontal">
+	<asp:GridView ID="CartGridView" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="OrderID,TubeID" DataSourceID="Fube_OrderItems" ForeColor="Black" GridLines="Horizontal" OnRowDeleted="CartGridView_RowDeleted" OnRowUpdated="CartGridView_RowUpdated">
 		<Columns>
 			<asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
 			<asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />
@@ -22,7 +22,7 @@
 		<SortedDescendingHeaderStyle BackColor="#242121" />
 	</asp:GridView>
 
-	<asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="Fube_OrderItemsTotal" ForeColor="Black" GridLines="Horizontal">
+	<asp:GridView ID="TotalGridView" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="Fube_OrderItemsTotal" ForeColor="Black" GridLines="Horizontal">
         <Columns>
             <asp:BoundField DataField="Column1" HeaderText="Total" ReadOnly="True" SortExpression="Column1" />
         </Columns>

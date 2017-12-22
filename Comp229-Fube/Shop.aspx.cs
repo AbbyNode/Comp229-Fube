@@ -85,7 +85,7 @@ namespace Fube {
 			if (Session[Session_OrderNum] == null) {
 				NewOrder();
 			}
-			
+
 			if (!CheckOrderItem(tubeId)) {
 				NewOrderItem(tubeId);
 			} else {
@@ -93,6 +93,7 @@ namespace Fube {
 			}
 
 			CartGridView.DataBind();
+			TotalGridView.DataBind();
 		}
 
 		private bool CheckOrderItem(int tubeId) {
@@ -152,6 +153,14 @@ namespace Fube {
 
 		protected void SubmitOrderButton_Click(object sender, EventArgs e) {
 			Response.Redirect("~/SubmitOrder.aspx");
+		}
+
+		protected void CartGridView_RowDeleted(object sender, GridViewDeletedEventArgs e) {
+			TotalGridView.DataBind();
+		}
+
+		protected void CartGridView_RowUpdated(object sender, GridViewUpdatedEventArgs e) {
+			TotalGridView.DataBind();
 		}
 	}
 }
