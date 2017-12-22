@@ -12,17 +12,17 @@ namespace Fube {
 		private static string ConnectionStringProfile = "FUBE";
 
 		private SqlConnection connection;
-		private SqlCommand addNewCmd;
+		private SqlCommand cmd_AddNew;
 
 		protected void Page_Load(object sender, EventArgs e) {
 			connection = new SqlConnection(ConfigurationManager.ConnectionStrings[ConnectionStringProfile].ToString());
-			addNewCmd = new SqlCommand("INSERT INTO Tubes (Name, Price) VALUES ('Empty', 0)", connection);
+			cmd_AddNew = new SqlCommand("INSERT INTO Tubes (Name, Price) VALUES ('Empty', 0)", connection);
 		}
 
 		protected void AddNewButton_Click(object sender, EventArgs e) {
 			try {
 				connection.Open();
-				addNewCmd.ExecuteNonQuery();
+				cmd_AddNew.ExecuteNonQuery();
 			} finally {
 				connection.Close();
 			}

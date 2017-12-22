@@ -7,34 +7,7 @@
 	<h1>Shop</h1>
 
 	<div id="ShopContainer">
-		<a class="ShopItem" href="#">
-			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/lasagnatube.jpg" />
-		</a>
-		<a class="ShopItem" href="#">
-			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/cerealtube.jpg" />
-		</a>
-		<a class="ShopItem" href="#">
-			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/fruittube_edit.jpg" />
-		</a>
-		<a class="ShopItem" href="#">
-			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/pizzburgertube.jpg" />
-		</a>
-		<a class="ShopItem" href="#">
-			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/seafoodtube.jpg" />
-		</a>
-		<a class="ShopItem" href="#">
-			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/steaktube.jpg" />
-		</a>
-		<a class="ShopItem" href="#">
-			<h2 class="ShopItemTitle">Item Title</h2>
-			<img class="ShopItemImg" src="res/Tubes/sushitube.jpg" />
-		</a>
+		<asp:PlaceHolder runat="server" ID="ShopItemsPlaceHolder"></asp:PlaceHolder>
 	</div>
 
 	<div>

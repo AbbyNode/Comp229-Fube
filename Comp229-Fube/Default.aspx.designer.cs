@@ -11,7 +11,7 @@ namespace Fube
 {
 
 
-    public partial class Default
-    {
-    }
+	public partial class About
+	{
+	}
 }

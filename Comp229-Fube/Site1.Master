@@ -57,7 +57,7 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="/Admin_Account.aspx">Account</a></li>
+						<li><a href="/Admin_Account.aspx">Accounts</a></li>
 						<li><a href="/Admin_Shop.aspx">Shop</a></li>
 						<li><asp:LinkButton runat="server" Text="Log Out" OnClick="LogOut"></asp:LinkButton></li>
 					</ul>
