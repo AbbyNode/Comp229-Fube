@@ -25,7 +25,7 @@ namespace Comp229_Fube {
 		}
 
 		private void LogOut() {
-			Response.Write("Log Out");
+			Session[Session_CurrentUser] = null;
 		}
 	}
 }

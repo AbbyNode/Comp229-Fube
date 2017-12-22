@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/LogIn.css" rel="stylesheet" />
     </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div id="LogInBody">
         <asp:MultiView ID="loginPageView" runat="server" ActiveViewIndex="0">
             <!--LOGIN VIEW-->

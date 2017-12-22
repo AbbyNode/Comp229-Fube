@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using Comp229_Fube;
 
 namespace Fube
 {
@@ -26,6 +27,11 @@ namespace Fube
 
         public void LoginClick(object sender, EventArgs e)
         {
+			Session[SiteMaster.Session_CurrentUser] = "hi";
+			return;
+
+
+
             string id = idTxtBox.Text;
             string pwd = pwTxtBox.Text;
 
