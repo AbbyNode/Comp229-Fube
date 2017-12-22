@@ -11,35 +11,33 @@ namespace Fube
     {
         private static SqlConnection con;
         private static SqlCommand command;
+        private static SqlDataReader sdr;
         static Connection()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["connect"].ToString();
             con = new SqlConnection(connectionString);
             command = new SqlCommand("", con);
+            sdr = command.ExecuteReader(); // What's role?
         }
 
         public static string loginAccount(string id, string password)
         {
             string result;
-            string query = "SELECT * FROM Users WHERE email = '" + id + "' and password='" + password + "'";
-            string query2 = "SELECT * FROM Admin WHERE email = '" + id + "' and password='" + password + "'";
+            string query = "SELECT * FROM Users WHERE username = '" + id + "' and password='" + password + "'";
             command.CommandText = query;
             con.Open();
-            SqlDataReader sdr = command.ExecuteReader(); // What's role?
+            bool IsAdmin = sdr.GetBoolean(0);
 
             try
             {
-                if (sdr.Read())
+                if (sdr.Read() && !IsAdmin)
                 {
                     result = "user";
                     return result;
                 }
                 else
                 {
-                    sdr.Close();
-                    SqlCommand command2 = new SqlCommand(query2, con);
-                    SqlDataReader sdr2 = command2.ExecuteReader();
-                    if (sdr2.Read())
+                    if (sdr.Read() && IsAdmin)
                     {
                         result = "admin";
                         return result;
@@ -61,7 +59,7 @@ namespace Fube
         public static void createAccount(Account account)
         {
             string query = string.Format(@"INSERT INTO Users VALUES('{0}', '{1}', '{2}', '{3}', '{4}')",
-                account.Email, account.Password, account.FirstName, account.LastName, account.Address);
+                account.Username, account.Password, account.Firstname, account.Lastname, account.Address);
             command.CommandText = query;
 
             try
