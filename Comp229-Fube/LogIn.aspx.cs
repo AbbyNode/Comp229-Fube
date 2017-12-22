@@ -7,56 +7,86 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace Fube {
-	public partial class LogIn : Page {
+namespace Fube
+{
+    public partial class LogIn : Page
+    {
 
-        public void ChangeView(object sender, EventArgs e) {
-			if (loginPageView.ActiveViewIndex == 0) {
-				loginPageView.ActiveViewIndex = 1;
-			} else {
-				loginPageView.ActiveViewIndex = 0;
-			}
-		}
-
-		public void LoginClick(object sender, EventArgs e) {
-            try
+        public void ChangeView(object sender, EventArgs e)
+        {
+            if (loginPageView.ActiveViewIndex == 0)
             {
-                string id = idTxtBox.Text;
-                string pwd = pwTxtBox.Text;
-                string query = "SELECT * FROM Users where email = '" + id + "' and password='" + pwd + "'";
-
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
-                con.Open();
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataReader sdr = cmd.ExecuteReader();
-
-                if (sdr.Read())
-                {
-                    // now we create a session
-                    Session["user"] = idTxtBox.Text;
-                    Response.Redirect("");
-                }
-                else
-                {
-                    Response.Write("Not Match");
-                }
-                con.Close();
-            }catch(Exception ex)
-            {
-                //Response.Write(ex.Message);
+                loginPageView.ActiveViewIndex = 1;
             }
-		}
+            else
+            {
+                loginPageView.ActiveViewIndex = 0;
+            }
+        }
 
-		public void SignUpClick(object sender, EventArgs e) {
-			//checks all validators on page
-			Page.Validate();
+        public void LoginClick(object sender, EventArgs e)
+        {
+            string id = idTxtBox.Text;
+            string pwd = pwTxtBox.Text;
 
-			if (Page.IsValid) {
+            string check = Connection.loginAccount(id, pwd);
+            Response.Write("Welcome " + check);
 
-			} else {
+            if (check == "user")
+            {
 
-			}
+                //Response.Write("Welcome " + id);
+                Session["CurrentUser"] = idTxtBox.Text;
+                Response.Redirect("Default.aspx");
+                
+            }
+            else if (check == "admin")
+            {
+                //Response.Write("Welcome " + id);
+                //Response.Redirect("");
+                Session["CurrentUser"] = idTxtBox.Text;
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "alert",
+                       "alert('They do not match any account. Double check and try again.');", true);
+            }
 
-		}
-	}
+        }
+
+        public void SignUpClick(object sender, EventArgs e)
+        {
+            //checks all validators on page
+            Page.Validate();
+
+            if (Page.IsValid)
+            {
+                try
+                {
+                    string email = txtSignupEmail.Text;
+                    string password = txtSignupPassword.Text;
+                    string firstName = txtFirstName.Text;
+                    string lastName = txtLastName.Text;
+                    string address = txtAddress.Text + ", " + provinceList.SelectedValue;
+
+                    Account account = new Account(email, password, firstName, lastName, address);
+                    Connection.createAccount(account);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert",
+                        "alert('Thank you for registering " + firstName + " " + lastName + ", your record was created successfully.');", true);
+                }
+                catch (Exception ex)
+                {
+                    Response.Write(ex.Message);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert",
+                        "alert('Upload failed');", true);
+                }
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "alert",
+                       "alert('Your registration information is invalid');", true);
+            }
+        }
+
+    }
 }
