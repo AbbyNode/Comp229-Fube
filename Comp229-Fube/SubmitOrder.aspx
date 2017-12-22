@@ -19,6 +19,39 @@
 		<SortedDescendingCellStyle BackColor="#E5E5E5" />
 		<SortedDescendingHeaderStyle BackColor="#242121" />
 	</asp:GridView>
+	<asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="Fube_OrderItemsTotal" ForeColor="Black" GridLines="Horizontal">
+        <Columns>
+            <asp:BoundField DataField="Column1" HeaderText="Total" ReadOnly="True" SortExpression="Column1" />
+        </Columns>
+        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+        <SortedDescendingHeaderStyle BackColor="#242121" />
+    </asp:GridView>
+
+	<asp:SqlDataSource ID="Fube_OrderItemsTotal" runat="server" ConnectionString="<%$ ConnectionStrings:FUBE %>" DeleteCommand="DELETE FROM [OrderItems] WHERE [OrderID] = @OrderID AND [TubeID] = @TubeID" InsertCommand="INSERT INTO [OrderItems] ([OrderID], [TubeID], [Quantity]) VALUES (@OrderID, @TubeID, @Quantity)" SelectCommand="SELECT SUM([Price]*[Quantity]) FROM [OrderItems] INNER JOIN [Tubes] ON [OrderItems].[TubeID] = [Tubes].[TubeID] WHERE ([OrderID] = @OrderID)" UpdateCommand="UPDATE [OrderItems] SET [Quantity] = @Quantity WHERE [OrderID] = @OrderID AND [TubeID] = @TubeID">
+		<DeleteParameters>
+			<asp:Parameter Name="OrderID" Type="Int32" />
+			<asp:Parameter Name="TubeID" Type="Int32" />
+		</DeleteParameters>
+		<InsertParameters>
+			<asp:Parameter Name="OrderID" Type="Int32" />
+			<asp:Parameter Name="TubeID" Type="Int32" />
+			<asp:Parameter Name="Quantity" Type="Decimal" />
+		</InsertParameters>
+		<SelectParameters>
+			<asp:SessionParameter DefaultValue="0" Name="OrderID" SessionField="OrderNum" Type="Int32" />
+		</SelectParameters>
+		<UpdateParameters>
+			<asp:Parameter Name="Quantity" Type="Decimal" />
+			<asp:Parameter Name="OrderID" Type="Int32" />
+			<asp:Parameter Name="TubeID" Type="Int32" />
+		</UpdateParameters>
+	</asp:SqlDataSource>
 	<asp:SqlDataSource ID="Fube_OrderItems" runat="server" ConnectionString="<%$ ConnectionStrings:FUBE %>" DeleteCommand="DELETE FROM [OrderItems] WHERE [OrderID] = @OrderID AND [TubeID] = @TubeID" InsertCommand="INSERT INTO [OrderItems] ([OrderID], [TubeID], [Quantity]) VALUES (@OrderID, @TubeID, @Quantity)" SelectCommand="SELECT [OrderID], [OrderItems].[TubeID], [Name], [Price], [Quantity] FROM [OrderItems] INNER JOIN [Tubes] ON [OrderItems].[TubeID] = [Tubes].[TubeID] WHERE ([OrderID] = @OrderID)" UpdateCommand="UPDATE [OrderItems] SET [Quantity] = @Quantity WHERE [OrderID] = @OrderID AND [TubeID] = @TubeID">
 		<DeleteParameters>
 			<asp:Parameter Name="OrderID" Type="Int32" />
